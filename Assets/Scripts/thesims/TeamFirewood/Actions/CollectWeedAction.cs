@@ -5,7 +5,7 @@ namespace TeamFirewood {
 /// <summary>
 /// Like harvest action but doesn't require a tool.
 /// </summary>
-public class CollectBranchesAction : GoapAction {
+public class CollectWeedAction : GoapAction {
 		private const Item resource = Item.Weed;
     public int amountToHarvest;
     public int maxAmountToCarry;
@@ -18,7 +18,7 @@ public class CollectBranchesAction : GoapAction {
     }
 
     protected void Start() {
-        targets = GetTargets<Branches>();
+        targets = GetTargets<Weed>();
     }
     
     public override bool RequiresInRange() {

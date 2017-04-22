@@ -145,7 +145,9 @@ public class RegressiveSearchWorldGoal : WorldGoal, IState {
         DebugUtils.Assert(goapAgent != null, "Expected GoapAgent but got " + agent);
         var possibleActions = new List<ITransition>();
         var availableActions = goapAgent.availableActions;
+			Debug.Log (availableActions.Count.ToString () + " available actions");
         foreach (var action in availableActions) {
+				Debug.Log (action);
             var targets = action.GetAllTargets(goapAgent);
             foreach (var target in targets) {
                 var effects = action.GetDependentEffects(goapAgent, target);

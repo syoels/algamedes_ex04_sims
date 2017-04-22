@@ -11,7 +11,11 @@ public enum PointOfInterestType {
     SupplyPile,
     Tree,
     Branches,
-    Well
+    Well,
+	Sofa,
+	Weed,
+	Bro,
+	Candy,
 }
 
 public class PointOfInterest : MonoBehaviour, IStateful {

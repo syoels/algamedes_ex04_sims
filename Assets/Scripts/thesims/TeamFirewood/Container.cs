@@ -10,7 +10,9 @@ public enum Item {
     Ore,
     NewTool,
     Branches,
-    Water
+    Water,
+	Weed,
+	Candy
 }
 
 /// <summary>
@@ -28,7 +30,9 @@ public enum Item {
             {Item.Ore, 0},
             {Item.NewTool, 0},
             {Item.Branches, 0},
-            {Item.Water, 0}
+            {Item.Water, 0},
+			{Item.Weed, 0},
+			{Item.Candy, 0}
         };
 
         [SerializeField]
@@ -43,6 +47,10 @@ public enum Item {
         protected int branches;
         [SerializeField]
         protected int water;
+		[SerializeField]
+		protected int weed;
+		[SerializeField]
+		protected int candy;
 
             protected void Awake() {
             // Make sure all new items are defined in the container.
@@ -56,6 +64,8 @@ public enum Item {
             items[Item.Ore] = ore;
             items[Item.Branches] = branches;
             items[Item.Water] = water;
+			items[Item.Weed] = weed;
+			items[Item.Candy] = candy;
         }
 
     #if DEBUG_CONTAINER
@@ -66,6 +76,8 @@ public enum Item {
             ore = items[Item.Ore];
             branches = items[Item.Branches];
             branches = items[Item.Water];
+			weed = items[Item.Weed];
+			candy = items[Item.Candy];
         }
     #endif
     }

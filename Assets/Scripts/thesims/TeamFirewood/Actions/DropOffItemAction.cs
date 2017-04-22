@@ -1,5 +1,7 @@
 using System.Collections.Generic;
 using Ai.Goap;
+using UnityEngine;
+using System;
 
 namespace TeamFirewood {
 public class DropOffItemAction : GoapAction {
@@ -12,12 +14,13 @@ public class DropOffItemAction : GoapAction {
         //       target or vice versa, or take up to a certain amount.
         AddPrecondition(itemToDrop.ToString(), CompareType.MoreThanOrEqual, 1);
         AddEffect(itemToDrop.ToString(), ModificationType.Add, -1);
-        AddEffect("create" + itemToDrop, ModificationType.Set, true);
+		AddEffect("create" + itemToDrop.ToString(), ModificationType.Set, true);
         AddTargetEffect(itemToDrop.ToString(), ModificationType.Add, 1);
+		AddTargetEffect("friendIsHappy", ModificationType.Set, true);
     }
 
     protected void Start() {
-        targets = GetTargets<HarvestPoint>();
+			targets = GetTargets<Sofa>();
     }
 
     public override bool RequiresInRange() {
@@ -30,7 +33,7 @@ public class DropOffItemAction : GoapAction {
 
     protected override bool OnDone(GoapAgent agent, WithContext context) {
         var backpack = agent.GetComponent<Container>();
-        var target = context.target as HarvestPoint;
+		var target = context.target as Sofa;
         ++target.GetComponent<Container>().items[itemToDrop];
         --backpack.items[itemToDrop];
         

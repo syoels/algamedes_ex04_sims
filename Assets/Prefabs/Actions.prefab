@@ -136,8 +136,9 @@ GameObject:
   m_Component:
   - component: {fileID: 431112}
   - component: {fileID: 11449268}
+  - component: {fileID: 114770106383842494}
   m_Layer: 0
-  m_Name: CraftFirewood
+  m_Name: CollectWeed
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -215,7 +216,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 449758}
-  - component: {fileID: 11417930}
+  - component: {fileID: 114762963196000824}
   m_Layer: 0
   m_Name: HarvestOre
   m_TagString: Untagged
@@ -263,7 +264,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 467262}
-  m_RootOrder: 11
+  m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &407632
 Transform:
@@ -323,12 +324,12 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 157148}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 467262}
-  m_RootOrder: 7
+  m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &432650
 Transform:
@@ -341,7 +342,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 467262}
-  m_RootOrder: 13
+  m_RootOrder: 14
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!4 &435542
 Transform:
@@ -399,13 +400,15 @@ Transform:
   - {fileID: 486752}
   - {fileID: 468366}
   - {fileID: 407632}
-  - {fileID: 431112}
+  - {fileID: 4900419947437366}
   - {fileID: 430084}
   - {fileID: 452930}
   - {fileID: 449758}
-  - {fileID: 403808}
+  - {fileID: 4680643904867504}
   - {fileID: 435542}
+  - {fileID: 403808}
   - {fileID: 432650}
+  - {fileID: 431112}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -502,17 +505,17 @@ MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 181620}
+  m_GameObject: {fileID: 1106609677951846}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 5e63a1f6a19014947ad8a8276602feac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cost: 6
+  cost: 0
   workDuration: 3
   toolDamage: 0.5
-  resource: 3
-  harvestSource: 3
+  resource: 6
+  harvestSource: 7
   amountToHarvest: 2
   maxAmountToCarry: 2
 --- !u!114 &11419718
@@ -691,3 +694,115 @@ Prefab:
   m_ParentPrefab: {fileID: 0}
   m_RootGameObject: {fileID: 109312}
   m_IsPrefabParent: 1
+--- !u!1 &1106609677951846
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4680643904867504}
+  - component: {fileID: 11417930}
+  m_Layer: 0
+  m_Name: HarvestWater
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!1 &1394019414332282
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 4900419947437366}
+  - component: {fileID: 114098236765257796}
+  m_Layer: 0
+  m_Name: CraftFirewood
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &4680643904867504
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1106609677951846}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 467262}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!4 &4900419947437366
+Transform:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1394019414332282}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 467262}
+  m_RootOrder: 7
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &114098236765257796
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1394019414332282}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 89e5ee28548d44f6fbb4e67e861a3a7d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 8
+  workDuration: 4
+  ingredients:
+  - item: 1
+    amount: 5
+  products:
+  - item: 2
+    amount: 5
+  toolDamage: 0.34
+  craftingStation: 1
+--- !u!114 &114762963196000824
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 181620}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5e63a1f6a19014947ad8a8276602feac, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 6
+  workDuration: 3
+  toolDamage: 0.5
+  resource: 3
+  harvestSource: 3
+  amountToHarvest: 2
+  maxAmountToCarry: 2
+--- !u!114 &114770106383842494
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 157148}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ba539da0235d6e947a4a20b915a885b0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 1
+  workDuration: 0
+  amountToHarvest: 0
+  maxAmountToCarry: 0

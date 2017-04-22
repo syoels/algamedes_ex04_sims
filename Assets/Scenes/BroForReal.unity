@@ -660,6 +660,27 @@ Prefab:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 100002, guid: 4b1301bfd3fb4d647afecae4877fb3ee, type: 2}
+      propertyPath: m_Name
+      value: Weed
+      objectReference: {fileID: 0}
+    - target: {fileID: 11457992, guid: 4b1301bfd3fb4d647afecae4877fb3ee, type: 2}
+      propertyPath: type
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 21216570, guid: 4b1301bfd3fb4d647afecae4877fb3ee, type: 2}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: 7a68bb303eacb0f4bbdbd20143938ff8,
+        type: 3}
+    - target: {fileID: 489786, guid: 4b1301bfd3fb4d647afecae4877fb3ee, type: 2}
+      propertyPath: m_LocalScale.x
+      value: 0.4
+      objectReference: {fileID: 0}
+    - target: {fileID: 489786, guid: 4b1301bfd3fb4d647afecae4877fb3ee, type: 2}
+      propertyPath: m_LocalScale.y
+      value: 0.4
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 4b1301bfd3fb4d647afecae4877fb3ee, type: 2}
   m_IsPrefabParent: 0
@@ -717,6 +738,10 @@ Transform:
 Transform:
   m_PrefabParentObject: {fileID: 414806, guid: 9d5ae0078f4da453c911daf3a1bf988a, type: 2}
   m_PrefabInternal: {fileID: 271429492}
+--- !u!4 &460988614 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 467262, guid: 6d0b619b530a548d1839a19ae7bf5faf, type: 2}
+  m_PrefabInternal: {fileID: 1516587143}
 --- !u!1001 &485221483
 Prefab:
   m_ObjectHideFlags: 0
@@ -1379,26 +1404,27 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 100002, guid: 4b1301bfd3fb4d647afecae4877fb3ee, type: 2}
       propertyPath: m_Name
-      value: Well
+      value: Sofa
       objectReference: {fileID: 0}
     - target: {fileID: 21216570, guid: 4b1301bfd3fb4d647afecae4877fb3ee, type: 2}
       propertyPath: m_Sprite
       value: 
-      objectReference: {fileID: 21300000, guid: 5183e2d758f03da4684ec536e66d2052,
+      objectReference: {fileID: 21300000, guid: b82aa79690abd794384312384e7b9cc8,
         type: 3}
     - target: {fileID: 489786, guid: 4b1301bfd3fb4d647afecae4877fb3ee, type: 2}
       propertyPath: m_LocalScale.x
-      value: 1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 489786, guid: 4b1301bfd3fb4d647afecae4877fb3ee, type: 2}
       propertyPath: m_LocalScale.y
-      value: 1
+      value: 0.3
       objectReference: {fileID: 0}
     - target: {fileID: 11457992, guid: 4b1301bfd3fb4d647afecae4877fb3ee, type: 2}
       propertyPath: type
-      value: 7
+      value: 8
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11457992, guid: 4b1301bfd3fb4d647afecae4877fb3ee, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 4b1301bfd3fb4d647afecae4877fb3ee, type: 2}
   m_IsPrefabParent: 0
 --- !u!4 &1387803153 stripped
@@ -1563,11 +1589,11 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   currentPlan: []
   availableActions:
-  - {fileID: 152410324}
-  - {fileID: 2044066509}
+  - {fileID: 0}
+  - {fileID: 1956487000}
   regressiveSearch: 1
   backpack: {fileID: 1491178483}
-  moveSpeed: 3
+  moveSpeed: 1
   textBubble: {fileID: 2111371169}
 --- !u!114 &1491178483 stripped
 MonoBehaviour:
@@ -1674,25 +1700,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 435542, guid: 6d0b619b530a548d1839a19ae7bf5faf, type: 2}
-      propertyPath: m_RootOrder
-      value: 13
-      objectReference: {fileID: 0}
-    - target: {fileID: 432650, guid: 6d0b619b530a548d1839a19ae7bf5faf, type: 2}
-      propertyPath: m_RootOrder
-      value: 14
-      objectReference: {fileID: 0}
-    - target: {fileID: 403808, guid: 6d0b619b530a548d1839a19ae7bf5faf, type: 2}
-      propertyPath: m_RootOrder
-      value: 12
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11449268, guid: 6d0b619b530a548d1839a19ae7bf5faf, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 6d0b619b530a548d1839a19ae7bf5faf, type: 2}
   m_IsPrefabParent: 0
---- !u!4 &1516587144 stripped
-Transform:
-  m_PrefabParentObject: {fileID: 467262, guid: 6d0b619b530a548d1839a19ae7bf5faf, type: 2}
-  m_PrefabInternal: {fileID: 1516587143}
 --- !u!1001 &1519799763
 Prefab:
   m_ObjectHideFlags: 0
@@ -1803,7 +1814,7 @@ Transform:
   m_PrefabInternal: {fileID: 614549602}
 --- !u!114 &1700885003 stripped
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11449268, guid: 6d0b619b530a548d1839a19ae7bf5faf,
+  m_PrefabParentObject: {fileID: 114098236765257796, guid: 6d0b619b530a548d1839a19ae7bf5faf,
     type: 2}
   m_PrefabInternal: {fileID: 1516587143}
   m_Script: {fileID: 11500000, guid: 89e5ee28548d44f6fbb4e67e861a3a7d, type: 3}
@@ -1831,6 +1842,43 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1516587143}
   m_Script: {fileID: 11500000, guid: ec886eef5ef35434797f05e364ed761e, type: 3}
+--- !u!1 &1930595979 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 100002, guid: 4b1301bfd3fb4d647afecae4877fb3ee, type: 2}
+  m_PrefabInternal: {fileID: 1387803152}
+--- !u!114 &1930595980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1930595979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c746da39be234924e88faabab81bd8e0, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  type: 8
+--- !u!114 &1930595981
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1930595979}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: de29a19b4f492479786eb4b9d0bb92bc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  tool: {fileID: 0}
+  toolType: ToolAxe
+  newTools: 0
+  logs: 0
+  firewood: 0
+  ore: 0
+  branches: 0
+  water: 0
+  weed: 0
+  candy: 0
 --- !u!1 &1933896193
 GameObject:
   m_ObjectHideFlags: 0
@@ -1892,15 +1940,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 414806, guid: 9d5ae0078f4da453c911daf3a1bf988a, type: 2}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 414806, guid: 9d5ae0078f4da453c911daf3a1bf988a, type: 2}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 414806, guid: 9d5ae0078f4da453c911daf3a1bf988a, type: 2}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 414806, guid: 9d5ae0078f4da453c911daf3a1bf988a, type: 2}
       propertyPath: m_LocalRotation.w
@@ -2216,7 +2264,7 @@ Prefab:
       objectReference: {fileID: 1917456532}
     - target: {fileID: 155356, guid: 9d5ae0078f4da453c911daf3a1bf988a, type: 2}
       propertyPath: m_Name
-      value: WaterMan
+      value: BroForReal
       objectReference: {fileID: 0}
     - target: {fileID: 11447292, guid: 9d5ae0078f4da453c911daf3a1bf988a, type: 2}
       propertyPath: regressiveSearch
@@ -2238,6 +2286,10 @@ Prefab:
       propertyPath: m_Enabled
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 414806, guid: 9d5ae0078f4da453c911daf3a1bf988a, type: 2}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11447292, guid: 9d5ae0078f4da453c911daf3a1bf988a, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 9d5ae0078f4da453c911daf3a1bf988a, type: 2}
@@ -2246,6 +2298,50 @@ Prefab:
 Transform:
   m_PrefabParentObject: {fileID: 414806, guid: 9d5ae0078f4da453c911daf3a1bf988a, type: 2}
   m_PrefabInternal: {fileID: 1947765202}
+--- !u!1 &1956486999
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 121410, guid: 6d0b619b530a548d1839a19ae7bf5faf, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1956487001}
+  - component: {fileID: 1956487000}
+  m_Layer: 0
+  m_Name: DropOffWeed
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1956487000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 11448900, guid: 6d0b619b530a548d1839a19ae7bf5faf,
+    type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1956486999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c2769096a69434679b14cd5a752d4457, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cost: 3
+  workDuration: 0.3
+  itemToDrop: 7
+--- !u!4 &1956487001
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 407632, guid: 6d0b619b530a548d1839a19ae7bf5faf, type: 2}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1956486999}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 460988614}
+  m_RootOrder: 16
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &1956548252
 Prefab:
   m_ObjectHideFlags: 0
@@ -2454,57 +2550,15 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 89d4a2347bc39ff4aafa9398ae9049a2, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &2044066507
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 181620, guid: 6d0b619b530a548d1839a19ae7bf5faf, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 2044066508}
-  - component: {fileID: 2044066509}
-  m_Layer: 0
-  m_Name: HarvestWater
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &2044066508
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 449758, guid: 6d0b619b530a548d1839a19ae7bf5faf, type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2044066507}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 1516587144}
-  m_RootOrder: 11
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &2044066509
+--- !u!114 &2044066509 stripped
 MonoBehaviour:
-  m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 11417930, guid: 6d0b619b530a548d1839a19ae7bf5faf,
     type: 2}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 2044066507}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
+  m_PrefabInternal: {fileID: 1516587143}
   m_Script: {fileID: 11500000, guid: 5e63a1f6a19014947ad8a8276602feac, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  cost: 0
-  workDuration: 3
-  toolDamage: 0.5
-  resource: 6
-  harvestSource: 7
-  amountToHarvest: 2
-  maxAmountToCarry: 2
 --- !u!114 &2050503954 stripped
 MonoBehaviour:
-  m_PrefabParentObject: {fileID: 11417930, guid: 6d0b619b530a548d1839a19ae7bf5faf,
+  m_PrefabParentObject: {fileID: 114762963196000824, guid: 6d0b619b530a548d1839a19ae7bf5faf,
     type: 2}
   m_PrefabInternal: {fileID: 1516587143}
   m_Script: {fileID: 11500000, guid: 5e63a1f6a19014947ad8a8276602feac, type: 3}
