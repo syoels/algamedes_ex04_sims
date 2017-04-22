@@ -1575,6 +1575,20 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1947765202}
   m_Script: {fileID: 11500000, guid: de29a19b4f492479786eb4b9d0bb92bc, type: 3}
+--- !u!61 &1491178484
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1491178481}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_Offset: {x: 0, y: 0}
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1}
 --- !u!1001 &1508516632
 Prefab:
   m_ObjectHideFlags: 0
