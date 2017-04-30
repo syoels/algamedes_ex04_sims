@@ -8,7 +8,6 @@ public enum Item {
     Logs,
     Firewood,
     Ore,
-    NewTool,
     Branches,
     Water,
 	Weed,
@@ -19,16 +18,13 @@ public enum Item {
 /// Backpack that holds a tool and resources.
 /// </summary>
     public class Container : MonoBehaviour {
-        public GameObject tool;
         // TODO: Add each tool as a specific item. Have the blacksmith craft each
         //       tool separately. One goal per tool.
         // TODO: Allow changing the priorities of the blacksmith's goals.
-        public string toolType = "ToolAxe";
         public Dictionary<Item, int> items = new Dictionary<Item, int> {
             {Item.Logs, 0},
             {Item.Firewood, 0},
             {Item.Ore, 0},
-            {Item.NewTool, 0},
             {Item.Branches, 0},
             {Item.Water, 0},
 			{Item.Weed, 0},
@@ -58,7 +54,6 @@ public enum Item {
                 if (item == Item.None) continue;
                 items[item] = 0;
             }
-            items[Item.NewTool] = newTools;
             items[Item.Logs] = logs;
             items[Item.Firewood] = firewood;
             items[Item.Ore] = ore;
@@ -70,7 +65,6 @@ public enum Item {
 
     #if DEBUG_CONTAINER
         protected void Update() {
-            newTools = items[Item.NewTool];
             logs = items[Item.Logs];
             firewood = items[Item.Firewood];
             ore = items[Item.Ore];

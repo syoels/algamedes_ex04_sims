@@ -19,7 +19,7 @@ namespace TeamFirewood {
         }
 
         protected void Start() {
-            targets = GetTargets<HarvestPoint>();
+			targets = GetTargets<PointOfInterest>();
         }
 
         public override bool RequiresInRange() {

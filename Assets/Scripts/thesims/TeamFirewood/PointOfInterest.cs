@@ -5,13 +5,6 @@ using Ai.Goap;
 namespace TeamFirewood {
 public enum PointOfInterestType {
     None,
-    ChoppingBlock,
-    Forge,
-    IronRock,
-    SupplyPile,
-    Tree,
-    Branches,
-    Well,
 	Sofa,
 	Weed,
 	Bro,

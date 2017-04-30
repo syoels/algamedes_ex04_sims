@@ -39,7 +39,10 @@ namespace TeamFirewood {
         }
 
         protected override bool OnDone(GoapAgent agent, WithContext context) {
-            // Done harvesting.
+
+			// Refresh list
+			targets = GetTargets<Weed>();
+
             var backpack = agent.GetComponent<Container>();
             backpack.items[resource] += amountToHarvest;
 

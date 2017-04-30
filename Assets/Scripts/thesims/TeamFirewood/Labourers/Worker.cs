@@ -24,18 +24,11 @@ public abstract class Worker : GoapAgent {
             if (item == Item.None) continue;
             state[item.ToString()] = new StateValue(backpack.items[item]);
         }
-        state["hasTool"] = new StateValue(backpack.tool != null);
     }
 
     protected void Start() {
         if (backpack == null) {
             backpack = gameObject.GetComponent<Container>();
-        }
-        if (backpack.tool == null) {
-            var prefab = Resources.Load<GameObject>(backpack.toolType);
-            var tool = Instantiate(prefab, transform.position, transform.rotation) as GameObject;
-            backpack.tool = tool;
-            tool.transform.parent = transform;
         }
     }
 
@@ -44,7 +37,6 @@ public abstract class Worker : GoapAgent {
             if (item == Item.None) continue;
             state[item.ToString()].value = backpack.items[item];
         }
-        state["hasTool"].value = backpack.tool != null;
         state["x"] = new StateValue(transform.position.x);
         state["y"] = new StateValue(transform.position.y);
 

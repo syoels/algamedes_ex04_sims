@@ -20,7 +20,6 @@ public class HarvestPoint : PointOfInterest {
             if (item == Item.None) continue;
             worldData[item.ToString()] = new StateValue(container.items[item]);
         }
-        worldData["hasTool"] = new StateValue(container.tool != null);
     }
 
     public override State GetState() {
@@ -28,7 +27,6 @@ public class HarvestPoint : PointOfInterest {
             if (item == Item.None) continue;
             worldData[item.ToString()].value = container.items[item];
         }
-        worldData["hasTool"].value = container.tool != null;
 
         return worldData;
     }

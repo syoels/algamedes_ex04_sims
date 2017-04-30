@@ -69,7 +69,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1040665258810716}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.36, y: -1.09, z: 0}
+  m_LocalPosition: {x: 3.96, y: 1.35, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4927256550362326}
@@ -84,7 +84,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1225987577745250}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 3.85, y: 2.9699998, z: 0}
+  m_LocalPosition: {x: 0.05, y: 0.73, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4042313128394456}
@@ -166,8 +166,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: de29a19b4f492479786eb4b9d0bb92bc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  tool: {fileID: 0}
-  toolType: ToolAxe
   newTools: 0
   logs: 0
   firewood: 0
@@ -190,10 +188,12 @@ MonoBehaviour:
   currentPlan: []
   availableActions:
   - {fileID: 0}
+  - {fileID: 0}
   regressiveSearch: 0
   backpack: {fileID: 114508667374921874}
-  moveSpeed: 1
+  moveSpeed: 1.1
   textBubble: {fileID: 114831690068835798}
+  amountToSmoke: 6
 --- !u!114 &114831690068835798
 MonoBehaviour:
   m_ObjectHideFlags: 1

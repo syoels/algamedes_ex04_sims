@@ -185,7 +185,6 @@ MonoBehaviour:
   availableActions:
   - {fileID: 0}
   - {fileID: 0}
-  - {fileID: 0}
   regressiveSearch: 1
   backpack: {fileID: 114861447986440722}
   moveSpeed: 1
