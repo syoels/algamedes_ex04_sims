@@ -7,10 +7,15 @@ public class Weed : PointOfInterest {
     [Range(0f, 1f)]
     [SerializeField] float chancesToHaveWeed = 1f;
     private readonly State state = new State();
+		public int amount = 10; 
 
     protected void Awake() {
-			state["has" + Item.Weed] =
-            new StateValue(RandomUtils.RandBool(chancesToHaveWeed));
+			bool hasWeed = RandomUtils.RandBool (chancesToHaveWeed);
+			if (hasWeed) {
+				state [Item.Weed.ToString()] = new StateValue (amount);
+			} else {
+				state [Item.Weed.ToString()] = new StateValue (0);
+			}
     }
 
     public override State GetState() {
@@ -18,10 +23,14 @@ public class Weed : PointOfInterest {
         enabled = true;
         return state;
     }
-
+	
     protected void Update() {
-			state["has" + Item.Weed].value =
-            RandomUtils.RandBool(chancesToHaveWeed);
+			if (RandomUtils.RandBool (chancesToHaveWeed)) {
+				state [Item.Weed.ToString()] = new StateValue (amount);
+			} else {
+				state[Item.Weed.ToString()].value = 0;
+			}
+
         enabled = false;
     }
 }
