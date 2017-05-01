@@ -183,7 +183,7 @@ MonoBehaviour:
   availableActions: []
   regressiveSearch: 0
   backpack: {fileID: 114385476206251166}
-  moveSpeed: 1
+  moveSpeed: 1.6
   textBubble: {fileID: 114249593939506132}
   amountToEat: 4
   incrementHungerBy: 2

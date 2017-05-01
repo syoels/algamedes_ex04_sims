@@ -1,4 +1,5 @@
 ﻿using Ai.Goap;
+using UnityEngine; 
 
 namespace TeamFirewood
 {
@@ -17,7 +18,6 @@ namespace TeamFirewood
 			foreach (EatAction a in actions) {
 				this.availableActions.Add (a);
 			}
-
 			var goal = new Goal();
 			goal["food"] = new Condition(CompareType.MoreThanOrEqual, amountToEat);
 			worldGoal[this] = goal;
@@ -29,8 +29,8 @@ namespace TeamFirewood
 		}
 
 		public void wantMoreFood(){
-			//amountToEat += incrementHungerBy;
-			//worldGoal[this]["food"] = new Condition(CompareType.MoreThanOrEqual, amountToEat);
+			amountToEat += incrementHungerBy;
+			worldGoal[this]["food"] = new Condition(CompareType.MoreThanOrEqual, amountToEat);
 		}
 	}
 }
