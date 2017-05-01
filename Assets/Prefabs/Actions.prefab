@@ -276,7 +276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   cost: 1
-  workDuration: 0
+  workDuration: 1
   eatAmount: 2
   resource: 6
 --- !u!114 &114770106383842494
@@ -308,5 +308,5 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cost: 1
   workDuration: 0
-  eatAmount: 2
-  resource: 6
+  eatAmount: 4
+  resource: 7

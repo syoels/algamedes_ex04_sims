@@ -6,7 +6,7 @@ namespace TeamFirewood {
 public class Candy : PointOfInterest {
     
     private readonly State state = new State();
-		public int amount = 10; 
+	public int amount = 10; 
 
     protected void Awake() {
 			state [Item.Candy.ToString()] = new StateValue (amount);

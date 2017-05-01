@@ -67,6 +67,10 @@ namespace TeamFirewood {
 				}
 
 			}
+			if (agent.GetType() == typeof(Dog)) {
+				Dog dog = agent as Dog;
+				dog.wantMoreFood ();
+			}
 			RefreshTargets ();
 			return base.OnDone(agent, context);
 		}

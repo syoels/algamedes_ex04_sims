@@ -8,6 +8,8 @@ public class TimerDisabled : MonoBehaviour {
     public float timeToRefill;
     public bool isActive = true;
     private UnityEngine.UI.Image _img = null; 
+	private Color32 COLOR_DISABLED = new Color32(50, 50, 50, 50);
+	private Color32 COLOR_ACTIVE = new Color32(200, 255, 200, 100);
 
 
     // Use this for initialization
@@ -23,7 +25,7 @@ public class TimerDisabled : MonoBehaviour {
     public void Disable() {
         isActive = false;
         if (_img != null) {
-                _img.color = new Color32(50, 50, 50, 100);
+			_img.color = COLOR_DISABLED;
         }
         Invoke("Enable", timeToRefill);
     }
@@ -32,7 +34,7 @@ public class TimerDisabled : MonoBehaviour {
         isActive = true;
         if (_img != null)
         {
-            _img.color = new Color32(255, 255, 255, 100);
+			_img.color = COLOR_ACTIVE;
         }
 
     }
