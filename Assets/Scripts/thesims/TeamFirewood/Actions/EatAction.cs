@@ -45,7 +45,7 @@ namespace TeamFirewood {
 
 
 		protected override bool OnDone(GoapAgent agent, WithContext context) {
-
+			
 			if (context.target.GetType () == typeof(Weed)) {
 				Weed weed = context.target as Weed; 	
 				if (weed != null && weed.ToString () != "Null" && weed.ToString () != "null") {
