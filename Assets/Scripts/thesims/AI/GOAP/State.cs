@@ -186,6 +186,9 @@ public class WorldState : Dictionary<IStateful, State>, IState, IGoal {
         DebugUtils.Assert(worldGoal != null, "Expected WorldGoal but got " + goal);
         var isGoal = true;
         foreach (var targetGoal in worldGoal) {
+				if (targetGoal.Key == null || targetGoal.Key.ToString () == "Null" || targetGoal.Key.ToString () == "null") {
+					continue;
+				}
             if (!ContainsKey(targetGoal.Key)) {
                 this[targetGoal.Key] = targetGoal.Key.GetState();
             }
@@ -206,6 +209,9 @@ public class WorldState : Dictionary<IStateful, State>, IState, IGoal {
         DebugUtils.Assert(worldGoal != null, "Expected WorldGoal but got " + goal);
         var count = 0;
         foreach (var targetGoal in worldGoal) {
+				if (targetGoal.Key == null || targetGoal.Key.ToString () == "Null" || targetGoal.Key.ToString () == "null") {
+					continue;
+				}
             if (!ContainsKey(targetGoal.Key)) {
                 this[targetGoal.Key] = targetGoal.Key.GetState();
             }

@@ -103,7 +103,11 @@ public abstract class GoapAgent : MonoBehaviour, IStateful, ISearchContext {
 #if DEBUG_PLAN
             currentPlan.Clear();
             foreach (GoapAction.WithContext action in currentActions) {
-                currentPlan.Add(action.actionData.name + " " + (action.target as Component).name);
+					string targetName = ""; 
+					if(action.target != null && action.target.ToString() != "Null" && action.target.ToString() != "null") {
+						targetName = (action.target as Component).name;
+					}
+					currentPlan.Add(action.actionData.name + " " + targetName);
             }
 #endif
 

@@ -238,6 +238,10 @@ public abstract class GoapAction : MonoBehaviour {
                 // just MoveAction to satisfy this goal. Instead, we calculate
                 // this cost as part of the heuristic.
                 var obj = target as Component;
+				if(obj == null || obj.ToString() == "Null" || obj.ToString() == "null"){
+						Debug.LogError ("obj is NULL (goal)");
+						return goal;
+				}
                 goal.agentGoalPosition = obj.transform.position;
             }
             return goal;
@@ -259,6 +263,10 @@ public abstract class GoapAction : MonoBehaviour {
                 var agentState = worldState[agent];
                 var currentPosition = new Vector2((int)agentState["x"].value, (int)agentState["y"].value);
                 var obj = target as Component;
+					if(obj == null || obj.ToString() == "Null" || obj.ToString() == "null"){
+						Debug.LogError ("obj is NULL (CalculateCost)");
+						return Mathf.Infinity;
+					}
                 var travelVector = (Vector2)obj.transform.position - currentPosition;
                 travelCost = travelVector.magnitude;
                 //DebugUtils.Log(travelCost + " to " + obj.name);
@@ -271,9 +279,13 @@ public abstract class GoapAction : MonoBehaviour {
             // Calculate travel cost.
             var travelCost = 0f;
             if (actionData.RequiresInRange()) {
-                if (goal.agentGoalPosition != null) {
+					if (goal.agentGoalPosition != null) {
                     var goalPosition = (Vector2)goal.agentGoalPosition;
                     var obj = target as Component;
+						if(obj == null || obj.ToString() == "Null" || obj.ToString() == "null"){
+							Debug.LogError ("obj is NULL (RegressiveSearchCost)");
+							return Mathf.Infinity;
+						}
                     var travelVector = (Vector2)obj.transform.position - goalPosition;
                     travelCost = travelVector.magnitude;
                     //DebugUtils.Log(travelCost + " to " + obj.name);
@@ -308,7 +320,11 @@ public abstract class GoapAction : MonoBehaviour {
 
         public override string ToString() {
             var s = new StringBuilder();
-            return s.Append(actionData.name).Append('@').Append((target as Component).name).ToString();
+				var targetName = ""; 
+				if(target != null && target.ToString() != "Null" && target.ToString() != "null"){
+					targetName = (target as Component).name;
+				}
+				return s.Append(actionData.name).Append('@').Append(targetName).ToString();
         }
     }
 }

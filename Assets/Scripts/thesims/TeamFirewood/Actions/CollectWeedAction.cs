@@ -21,27 +21,32 @@ namespace TeamFirewood {
         }
 
         protected void Start() {
-            if (fromBros) {
-                targets = GetTargets<BroForReal>();
-				Debug.Log ("Collecting from Bros. found " + targets.Count.ToString() + " Bros.");
-            }
-            else {
-                targets = GetTargets<Weed>();
-            }
+			RefreshTargets ();
         }
+
+		private void RefreshTargets(){
+			if (fromBros) {
+				targets = GetTargets<BroForReal>();
+			}
+			else {
+				targets = GetTargets<Weed>();
+			}
+		}
     
         public override bool RequiresInRange() {
             return true;
         }
 
         public override List<IStateful> GetAllTargets(GoapAgent agent) {
+			// Refresh list
+			RefreshTargets();
             return targets;
         }
 
         protected override bool OnDone(GoapAgent agent, WithContext context) {
 
-			// Refresh list
-			targets = GetTargets<Weed>();
+			//destroy plant if finished
+			Weed weed = context.target as Weed; 
 
             var backpack = agent.GetComponent<Container>();
             backpack.items[resource] += amountToHarvest;
@@ -49,9 +54,16 @@ namespace TeamFirewood {
 			if (fromBros) {
 				var bro = context.target as BroForReal;
 				Container broBag = bro.GetComponent<Container> ();
-				broBag.items[resource] -= amountToHarvest;
+				broBag.items [resource] -= amountToHarvest;
+			} else if (weed != null && weed.ToString() != "Null" && weed.ToString() != "null") {
+				weed.amount -= amountToHarvest;
+				if (weed.amount <= 0) {
+					GameObject weedObj = weed.gameObject; 
+					Destroy (weedObj);
+				}
 			}
-
+			// Refresh list
+			RefreshTargets();
 
             return base.OnDone(agent, context);
         }

@@ -92,6 +92,9 @@ public class WorldGoal : Dictionary<IStateful, Goal>, IGoal {
         var s = new StringBuilder();
         foreach (var kvp in this) {
             var target = kvp.Key as Component;
+				if (target == null || target.ToString () == "Null" || target.ToString () == "null") {
+					continue;
+				}
             s.Append(target.name).Append(": ").Append(kvp.Value).Append('\n');
         }
         return s.ToString();

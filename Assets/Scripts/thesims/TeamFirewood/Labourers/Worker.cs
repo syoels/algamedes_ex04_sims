@@ -79,6 +79,9 @@ public abstract class Worker : GoapAgent {
         // Move towards the NextAction's target.
         float step = moveSpeed * Time.deltaTime;
         var target = nextAction.target as Component;
+			if (target == null || target.ToString () == "Null" || target.ToString () == "null") {
+				return false;
+			}
         // NOTE: We must cast to Vector2, otherwise we'll compare the Z coordinate
         //       which does not have to match!
         var position = (Vector2)target.transform.position;
